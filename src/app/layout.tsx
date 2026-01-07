@@ -9,8 +9,8 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Site Advogada",
-  description: "Site para advogada",
+  title: "Izabella de Bourbon",
+  description: "Site Advogada Izabella de Bourbon, atua no Paraná, Brasil.",
 };
 
 export default function RootLayout({
