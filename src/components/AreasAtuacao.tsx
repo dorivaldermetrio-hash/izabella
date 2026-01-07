@@ -3,44 +3,62 @@ import FadeInOnScroll from "./FadeInOnScroll";
 export default function AreasAtuacao() {
   const areas = [
     {
-      titulo: "Direito Empresarial",
-      descricao: "Assessoria jurídica completa para empresas, incluindo contratos comerciais, compliance, fusões e aquisições, e consultoria estratégica para o crescimento sustentável do seu negócio.",
+      titulo: "Direito Empresarial & Estratégico",
+      descricao: "Assessoria jurídica para quem empreende e precisa estruturar o negócio com segurança, tomar decisões estratégicas e crescer com respaldo legal.",
       detalhes: [
         "Contratos comerciais e empresariais",
-        "Compliance e governança corporativa",
-        "Fusões e aquisições",
-        "Consultoria estratégica",
+        "Estruturação jurídica de negócios",
+        "Consultoria estratégica para crescimento",
+        "Apoio jurídico para negócios digitais e infoprodutores",
       ],
+      destaque: "Segurança jurídica para crescer com previsibilidade.",
     },
     {
-      titulo: "Direito Trabalhista",
-      descricao: "Atuação especializada na defesa trabalhista empresarial, com foco em prevenção de passivos, treinamento de equipes e consultoria estratégica para empresas.",
+      titulo: "Direito do Trabalho Empresarial & Prevenção de Conflitos",
+      descricao: "Atuação estratégica focada na prevenção de passivos trabalhistas, aliando orientação jurídica, desenvolvimento humano e uso de tecnologia para relações de trabalho mais saudáveis.",
       detalhes: [
         "Defesa trabalhista empresarial",
-        "Treinamento e capacitação",
-        "Consultoria em relações de trabalho",
-        "Prevenção de passivos trabalhistas",
+        "Consultoria preventiva",
+        "Estruturação de rotinas e políticas internas",
+        "Prevenção de conflitos trabalhistas",
       ],
+      destaque: "Menos riscos, mais organização.",
     },
     {
-      titulo: "Advocacia Extrajudicial",
-      descricao: "Atuação especializada em procedimentos extrajudiciais, oferecendo soluções ágeis e eficientes para questões que podem ser resolvidas sem necessidade de processo judicial.",
+      titulo: "Treinamentos Empresariais Integrados",
+      descricao: "Treinamentos personalizados que unem Direito, Inteligência Artificial, Marketing Digital e Desenvolvimento Humano, com foco em produtividade, comunicação, responsabilidade e prevenção de riscos jurídicos, incluindo diretrizes da NR-1.",
+      detalhes: [
+        "Treinamentos preventivos em relações de trabalho (NR-1)",
+        "Comunicação estratégica e prevenção de conflitos",
+        "Uso da IA para otimização de tarefas e processos",
+        "Desenvolvimento de soft skills e responsabilidade individual",
+      ],
+      destaque: "Empresas mais conscientes, produtivas e juridicamente protegidas.",
+    },
+    {
+      titulo: "Advocacia Extrajudicial Estratégica",
+      descricao: "Soluções jurídicas rápidas, eficientes e menos desgastantes, priorizando acordos e economia de tempo e recursos.",
       detalhes: [
         "Inventários extrajudiciais",
         "Divórcios extrajudiciais",
         "Adjudicação compulsória",
-        "Consultoria em procedimentos extrajudiciais",
+        "Soluções consensuais personalizadas",
       ],
+      destaque: "Nem todo conflito precisa virar processo.",
     },
     {
-      titulo: "Advocacia Cível",
-      descricao: "Atuação especializada em questões cíveis, representando clientes em diversas demandas com expertise técnica e estratégias personalizadas para cada caso.",
+      titulo: "Direito Cível, Família e Sucessões",
+      descricao: "Atuação em demandas cíveis, de família e sucessões, tanto preventivas quanto litigiosas, com abordagem técnica, estratégica e sensível às particularidades humanas envolvidas.",
       detalhes: [
         "Contratos e obrigações",
         "Responsabilidade civil",
         "Direitos reais",
-        "Consultoria cível preventiva",
+        "Processos cíveis litigiosos",
+        "Direito de família (divórcio, guarda, alimentos, partilha)",
+        "Sucessões (inventários judiciais e extrajudiciais)",
+        "Consultoria preventiva patrimonial e familiar",
       ],
+      destaque: "Quando o conflito envolve patrimônio, relações e histórias de vida, a atuação exige técnica e sensibilidade.",
     },
   ];
 
@@ -71,7 +89,7 @@ export default function AreasAtuacao() {
 
         {/* Introdução */}
         <FadeInOnScroll delay={100}>
-          <div className="max-w-4xl mx-auto mb-16 md:mb-20">
+          <div className="max-w-5xl mx-auto mb-16 md:mb-20">
           <p
             className="text-xl md:text-2xl lg:text-3xl font-light italic text-center leading-relaxed"
             style={{
@@ -81,8 +99,10 @@ export default function AreasAtuacao() {
               lineHeight: "1.7",
             }}
           >
-            Atuação especializada em diversas áreas do direito, sempre com 
-            excelência técnica e sensibilidade humana.
+            Atuação jurídica e estratégica integrada, voltada a profissionais liberais, 
+            pequenos e médios empresários e infoprodutores, unindo Direito, Inteligência 
+            Artificial, Marketing Digital e Desenvolvimento Humano, com foco em prevenção, 
+            estruturação e atuação firme no contencioso quando necessário.
           </p>
         </div>
         </FadeInOnScroll>
@@ -106,7 +126,7 @@ export default function AreasAtuacao() {
               <div className="relative">
                 {/* Título da Área */}
                 <h3
-                  className="text-2xl md:text-3xl lg:text-4xl font-light mb-4"
+                  className="text-xl md:text-2xl lg:text-3xl font-light mb-4"
                   style={{
                     color: "#B8A082",
                     textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
@@ -132,7 +152,7 @@ export default function AreasAtuacao() {
                 </p>
 
                 {/* Lista de Detalhes */}
-                <div className="space-y-3">
+                <div className="space-y-3 mb-6">
                   {area.detalhes.map((detalhe, idx) => (
                     <div key={idx} className="flex items-start gap-3">
                       <div
@@ -153,6 +173,19 @@ export default function AreasAtuacao() {
                     </div>
                   ))}
                 </div>
+
+                {/* Destaque */}
+                <div className="pt-4 border-t border-gray-700">
+                  <p
+                    className="text-sm md:text-base font-light italic"
+                    style={{
+                      color: "#B8A082",
+                      textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
+                    }}
+                  >
+                    {area.destaque}
+                  </p>
+                </div>
               </div>
             </div>
             </FadeInOnScroll>
@@ -160,7 +193,7 @@ export default function AreasAtuacao() {
         </div>
 
         {/* Mensagem Final */}
-        <FadeInOnScroll delay={600}>
+        <FadeInOnScroll delay={700}>
           <div className="max-w-4xl mx-auto mt-16 md:mt-20">
           <div className="h-px mb-10" style={{ background: "linear-gradient(to right, transparent, #B8A082, transparent)" }}></div>
           <p
@@ -172,8 +205,8 @@ export default function AreasAtuacao() {
               lineHeight: "1.7",
             }}
           >
-            "Cada área de atuação recebe a mesma dedicação e excelência, 
-            sempre com foco em resultados que transformam vidas e negócios."
+            "Especialista em pessoas, não apenas em áreas jurídicas. Cada caso é único 
+            e merece uma abordagem integrada que une técnica, estratégia e humanidade."
           </p>
           <div className="h-px mt-10" style={{ background: "linear-gradient(to right, transparent, #B8A082, transparent)" }}></div>
         </div>
