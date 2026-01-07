@@ -27,7 +27,6 @@ export default function Header() {
       // Verificar cada seção na ordem
       const sobre = document.getElementById("sobre");
       const conquistas = document.getElementById("conquistas");
-      const depoimentos = document.getElementById("depoimentos");
       const areas = document.getElementById("areas");
       const educacional = document.getElementById("educacional");
       const contato = document.getElementById("contato");
@@ -46,11 +45,6 @@ export default function Header() {
         return;
       }
       if (areas && areas.getBoundingClientRect().top <= viewportMiddle) {
-        setHeaderStyle("dark");
-        rafId = null;
-        return;
-      }
-      if (depoimentos && depoimentos.getBoundingClientRect().top <= viewportMiddle) {
         setHeaderStyle("dark");
         rafId = null;
         return;
