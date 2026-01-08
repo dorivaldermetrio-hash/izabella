@@ -12,7 +12,7 @@ export default function WhatsAppButton() {
       aria-label="Fale conosco no WhatsApp"
     >
       <FaWhatsapp 
-        className="text-white text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-300" 
+        className="text-white text-4xl md:text-3xl group-hover:scale-110 transition-transform duration-300" 
       />
     </a>
   );

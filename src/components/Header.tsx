@@ -219,7 +219,7 @@ export default function Header() {
             className={`font-light text-lg md:text-base lg:text-lg xl:text-xl hover:opacity-80 transition-opacity ${textColor}`}
             style={{ textShadow }}
           >
-            (41) 41 9664-7152
+            (41) 9664-7152
           </a>
         </div>
       </nav>
