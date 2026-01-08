@@ -5,6 +5,7 @@ import Conquistas from "@/components/Conquistas";
 import AreasAtuacao from "@/components/AreasAtuacao";
 import Educacional from "@/components/Educacional";
 import Contato from "@/components/Contato";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
     <AreasAtuacao />
     <Educacional />
     <Contato />
+    <WhatsAppButton />
     </>
   );
 }
