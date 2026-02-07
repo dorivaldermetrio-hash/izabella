@@ -210,6 +210,15 @@ export default function Hero() {
                   href="http://wa.me/554188980887"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                      return (window as any).gtag_report_conversion('http://wa.me/554188980887');
+                    } else {
+                      window.open('http://wa.me/554188980887', '_blank');
+                    }
+                    return false;
+                  }}
                   className="px-6 md:px-8 py-3 md:py-4 bg-black text-white font-semibold tracking-wide text-xs md:text-sm uppercase transition-all duration-300 hover:bg-gray-800 whitespace-nowrap text-center"
                   style={{
                     letterSpacing: "0.15em",

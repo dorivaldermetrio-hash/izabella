@@ -216,6 +216,15 @@ export default function Header() {
             href="http://wa.me/554188980887"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                return (window as any).gtag_report_conversion('http://wa.me/554188980887');
+              } else {
+                window.open('http://wa.me/554188980887', '_blank');
+              }
+              return false;
+            }}
             className={`font-light text-lg md:text-base lg:text-lg xl:text-xl hover:opacity-80 transition-opacity ${textColor}`}
             style={{ textShadow }}
           >

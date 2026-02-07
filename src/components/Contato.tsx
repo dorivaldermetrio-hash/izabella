@@ -81,6 +81,7 @@ export default function Contato() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 mb-16 md:mb-20">
           {contatos.map((contato, index) => {
             const Icone = contato.icone;
+            const isWhatsApp = contato.url.includes('wa.me');
             return (
               <FadeInOnScroll key={index} delay={200 + (index * 50)}>
               <a
@@ -88,6 +89,15 @@ export default function Contato() {
                 href={contato.url}
                 target={contato.url.startsWith("http") ? "_blank" : undefined}
                 rel={contato.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                onClick={isWhatsApp ? (e) => {
+                  e.preventDefault();
+                  if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+                    return (window as any).gtag_report_conversion(contato.url);
+                  } else {
+                    window.open(contato.url, '_blank');
+                  }
+                  return false;
+                } : undefined}
                 className="group flex flex-col items-center justify-center p-8 md:p-10 bg-white rounded-lg border border-gray-200 hover:border-[#B8A082] transition-all duration-300 hover:shadow-xl cursor-pointer"
                 style={{
                   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.05)",
